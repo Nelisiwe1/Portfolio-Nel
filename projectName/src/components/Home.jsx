@@ -1,33 +1,29 @@
-import { useState } from 'react'
 
-import {Canvas} from "@react-three/fiber";
-import {OrbitControls} from "@react-three/drei";
+import React from 'react';
 
-function Home() {
-  const [count, setCount] = useState(0)
-
-  return (
-// tailwind css usage
-    <div className={' bg-indigo-800 absolute w-full h-screen p-0 top-0 left-0'}> 
-      <div className={'h-5/6 p-0 '}>
-        <Canvas camera = {{
-          position: [0,0,7],
-          fov:30,
-
-        }}>
-          <color attach="background" args={["#ececec"]}/>
-// three-drei usage
-          <OrbitControls/> 
-          <mesh rotation ={[Math.PI / 10,10,10]}>
-// three-fiber usage
-            <torusGeometry /> 
-            <meshNormalMaterial/>
-          </mesh>
-        </Canvas>
-        <div className={"text-current text-7xl italic font-light z-40 p-5"}>yaee! you made it </div>
-      </div>
-    </div>
-  )
+const Home = () => {
+    return (
+        <main id="home">
+            <h1 className="lg-heading">
+                Nelisiwe <span className="text-secondary">Ngqeme</span> 
+            </h1>
+            <h2 className="sm-heading">
+                Full-Stack Software Developer
+            </h2>
+            <div className="icons">
+                <a href="">
+                    <i className="fab fa-facebook fa-2x"></i>           
+                </a>
+                <a href="">
+                    <i className="fab fa-linkedin fa-2x"></i>           
+                </a>
+                <a href="">
+                    <i className="fab fa-github fa-2x"></i>           
+                </a>
+            </div>
+        </main>
+    );
 }
 
 export default Home;
+
