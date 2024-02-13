@@ -1,23 +1,53 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import * as THREE from 'three';
 
 function Home() {
-    return (
-        <section className="home flex items-center justify-center flex-wrap gap-6 bg-fixed bg-cover" style={{backgroundImage: `url("background.jpg")`}}>
-            <main className="flex flex-1">
-                <div className="image flex-1 flex-shrink-0 md:w-96">
-                    <img src="./background.jpg" alt="Background" className="w-full h-screen" />
-                </div>
-                <div className="content flex-1 flex-shrink-0 md:w-96 flex flex-col justify-center items-start ml-4">
-                    <h3 className="text-4xl text-black uppercase mb-4"><span className="text-main-color">Nelisiwe Ngqeme</span></h3>
-                    <div className="info text-2xl text-black py-2">Software Developer</div>
-                    <div className="text text-1.7rem text-gray-600 py-2"></div>
-                </div>
-            </main>
-        </section>
-    );
+    const containerRef = useRef();
+
+    useEffect(() => {
+        // Scene
+        const scene = new THREE.Scene();
+
+        // Camera
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 5;
+
+        // Renderer
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        containerRef.current.appendChild(renderer.domElement);
+
+        // Background Image
+        const textureLoader = new THREE.TextureLoader();
+        const backgroundImage = textureLoader.load('background.jpg');
+        scene.background = backgroundImage;
+
+        // Render loop
+        const animate = function () {
+            requestAnimationFrame(animate);
+
+            // Add animation or other logic here
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+
+        // Cleanup
+        return () => {
+            if (containerRef.current) {
+                containerRef.current.removeChild(renderer.domElement);
+                renderer.dispose();
+            }
+        };
+    }, []);
+
+    return <div ref={containerRef} />;
 }
 
 export default Home;
+
+
 
 
 
