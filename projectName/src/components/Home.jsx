@@ -1,29 +1,24 @@
-
 import React from 'react';
 
-const Home = () => {
+function Home() {
     return (
-        <main id="home">
-            <h1 className="lg-heading">
-                Nelisiwe <span className="text-secondary">Ngqeme</span> 
-            </h1>
-            <h2 className="sm-heading">
-                Full-Stack Software Developer
-            </h2>
-            <div className="icons">
-                <a href="">
-                    <i className="fab fa-facebook fa-2x"></i>           
-                </a>
-                <a href="">
-                    <i className="fab fa-linkedin fa-2x"></i>           
-                </a>
-                <a href="">
-                    <i className="fab fa-github fa-2x"></i>           
-                </a>
-            </div>
-        </main>
+        <section className="home flex items-center justify-center flex-wrap gap-6 bg-fixed bg-cover" style={{backgroundImage: `url("background.jpg")`}}>
+            <main className="flex flex-1">
+                <div className="image flex-1 flex-shrink-0 md:w-96">
+                    <img src="./background.jpg" alt="Background" className="w-full h-screen" />
+                </div>
+                <div className="content flex-1 flex-shrink-0 md:w-96 flex flex-col justify-center items-start ml-4">
+                    <h3 className="text-4xl text-black uppercase mb-4"><span className="text-main-color">Nelisiwe Ngqeme</span></h3>
+                    <div className="info text-2xl text-black py-2">Software Developer</div>
+                    <div className="text text-1.7rem text-gray-600 py-2"></div>
+                </div>
+            </main>
+        </section>
     );
 }
 
 export default Home;
+
+
+
 
