@@ -12,14 +12,15 @@ function Portfolio() {
         Check out some of my projects...
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-        <div className="item">
-          <a href="">
-            <img
-              src="img/Projects/project2.jpg"
-              alt="Project"
-              className="w-full h-auto"
-            />
-          </a>
+  <div className="item">
+    <a href="#">
+      <img
+        src="./assets/project1.jpg"
+        alt="Project"
+        className="w-full h-auto"
+      />
+    </a>
+ 
           <a
             href=""
             className="btn-dark inline-block mt-2"
