@@ -24,28 +24,31 @@ function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto p-4 bg-gradient-to-r from-blue-900 to-blue-600 rounded-md border border-blue-700 shadow-lg">
-      <form className="form">
-        <div className="descr text-center text-white text-lg font-semibold my-6">Send Message</div>
 
-        <div className="input">
-          <input required autoComplete="off" type="text" className="input-field" id="name" />
-          <label htmlFor="name" className="input-label">Name</label>
+
+            <div className="container mx-auto p-2 bg-gradient-to-r from-blue-900 to-blue-600 border border-blue-700 shadow-lg max-w-md">
+      <form className="form border-2">
+        <div className="descr text-center text-white text-lg font-semibold my-4">Send Message</div>
+
+        <div className="input mb-2">
+          <input required autoComplete="off" type="text" className="input-field text-white bg-transparent border-b-2 border-blue-400 focus:outline-none focus:border-blue-700" id="name" />
+          <label htmlFor="name" className="input-label text-white">Name</label>
         </div>
 
-        <div className="input">
-          <input required autoComplete="off" name="email" type="text" className="input-field" id="email" />
-          <label htmlFor="email" className="input-label">E-mail</label>
+        <div className="input mb-2">
+          <input required autoComplete="off" name="email" type="email" className="input-field text-white bg-transparent border-b-2 border-blue-400 focus:outline-none focus:border-blue-700" id="email" />
+          <label htmlFor="email" className="input-label text-white">E-mail</label>
         </div>
 
-        <div className="input">
-          <textarea required cols="30" rows="1" id="message" className="input-field"></textarea>
-          <label htmlFor="message" className="input-label">Message</label>
+        <div className="input mb-2">
+          <textarea required cols="30" rows="4" id="message" className="input-field text-white bg-transparent border-b-2 border-blue-400 focus:outline-none focus:border-blue-700"></textarea>
+          <label htmlFor="message" className="input-label text-white">Message</label>
         </div>
 
-        <button className="btn">Send message →</button>
+        <button className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send message →</button>
       </form>
-            </div>
+    </div>
+
             <footer className="text-center text-gray-600 text-sm mt-6"> Designed by Nelisiwe 2023</footer>
             
         </section>
