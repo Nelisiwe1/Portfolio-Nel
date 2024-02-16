@@ -3,8 +3,14 @@ import React from 'react';
 
 function Contact() {
     return (
-        <section className="contact bg-gray-200 py-8" id="contact">
+        <div className="contact" id="contact" >
+          <div className="flex items-center justify-center flex-wrap gap-6 bg-fixed bg-cover" style={{backgroundImage: `url("/5535279.jpg")`}}>
+            <div className="image flex-1 flex-shrink-0 md:w-96">
+                <img src="/assets/path_to_your_image.jpg" alt="Background" className="w-full h-screen" />
+            </div>
+
             <h1 className="heading mb-6"> contact <span> me </span> </h1>
+            
             <div className="icons-container flex flex-col items-left mb-6 ml-8 mt-4">
                 <div className="icons-container flex flex-col items-center space-y-6 mb-6 ml-4">
                     <div className="icons text-center">
@@ -48,10 +54,12 @@ function Contact() {
         <button className="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send message →</button>
       </form>
     </div>
+    </div>
+    
 
             <footer className="text-center text-gray-600 text-sm mt-6"> Designed by Nelisiwe 2023</footer>
-            
-        </section>
+       </div>     
+        
     );
 }
 

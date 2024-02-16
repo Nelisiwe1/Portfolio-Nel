@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
 }
@@ -21,10 +21,10 @@ body:has(.card[data-color="green"]:hover) {
   background-color: rgb(var(--green-rgb) / 25%);
 }
 
-@layer utilities {
-  .max-container {
+@layer utilities { 
+   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
-  }
+  } 
 
   .head-text {
     @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
@@ -63,11 +63,11 @@ body:has(.card[data-color="green"]:hover) {
     @apply flex flex-wrap gap-7 items-center justify-between;
   }
 
-  .info-box {
+  /* .info-box {
     @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
-  }
+  } */
 
-  .neo-btn {
+  /* .neo-btn {
     @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
 
@@ -78,9 +78,9 @@ body:has(.card[data-color="green"]:hover) {
   .cta-text {
     @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
   }
-}
+} */
 
-.menu-btn {
+/* .menu-btn {
   position: absolute;
   z-index: 3;
   right: 35px;
@@ -211,8 +211,8 @@ body:has(.card[data-color="green"]:hover) {
 
 .nav-item:nth-child(4) {
   transition-delay: 0.4s;
-}
-
+} */
+/* 
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -225,7 +225,7 @@ body:has(.card[data-color="green"]:hover) {
     border: #eece1a 3px solid; }
   .about-info .bio {
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1.5rem; } */
  
 
 .projects {

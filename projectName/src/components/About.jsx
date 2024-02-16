@@ -6,14 +6,16 @@ function About() {
     <div className="container mx-auto lg:ml-64">
       {/* Your content goes here */}
   
-  
-        <div className="flex flex-col md:flex-row items-center justify-center md:gap-10">
-       <div className="md:flex-2 flex justify-center md:justify-end mb-6 md:mb-0">
-  <img src="IMG-20231229-WA0033.jpg" className="w-50 h-auto object-cover" alt="Neliswe Ngqeme" />
+      <div className="flex flex-col md:flex-row items-center justify-center md:gap-10">
+      <div className="flex justify-center mb-6 md:mb-4 ml-auto md:ml-8">
+    <img src="IMG-20231229-WA0033.jpg" className="w-96 h-auto object-cover" alt="Neliswe Ngqeme" />
 </div>
 
 
-          <div className="md:flex-3">
+
+
+
+<div className="md:flex-3">
             <div className="text-center md:text-left">
               <div>
               <h1 className="text-3xl lg:text-5xl lg-heading mb-4">
@@ -38,6 +40,35 @@ function About() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-md mx-auto mt-12 p-6 bg-gray-50 text-gray rounded-lg shadow-lg">
+        <h1 className="text-3xl mb-6">My Skills</h1>
+        <ul>
+          <li className="mb-4">
+            <p className="text-lg">HTML</p>
+            <div className="bar bg-orange-500 h-4 rounded-full relative">
+              <span className="html absolute top-0 left-0 bg-gradient-to-r from-pink-500 to-purple-500 h-50"></span>
+            </div>
+          </li>
+          <li className="mb-4">
+            <p className="text-lg">CSS</p>
+            <div className="bar bg-orange-500 h-4 rounded-full relative">
+              <span className="css absolute top-0 left-0 bg-gradient-to-r from-pink-500 to-purple-500 h-full"></span>
+            </div>
+          </li>
+          <li className="mb-4">
+            <p className="text-lg">JavaScript</p>
+            <div className="bar bg-orange-500 h-4 rounded-full relative">
+              <span className="javascript absolute top-0 left-0 bg-gradient-to-r from-pink-500 to-purple-500 h-full"></span>
+            </div>
+          </li>
+          <li className="mb-4">
+            <p className="text-lg">Java</p>
+            <div className="bar bg-orange-500 h-4 rounded-full relative">
+              <span className="java absolute top-0 left-0 bg-gradient-to-r from-pink-500 to-purple-500 h-full"></span>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 class Skills extends React.Component {
   render() {
     return (
-        <div className="max-w-md mx-auto mt-12 p-6 bg-gray-800 text-white rounded-lg shadow-lg">
+        <div className="max-w-md mx-auto mt-12 p-6 bg-white-800 text-black rounded-lg shadow-lg">
         <h1 className="text-3xl mb-6">My Skills</h1>
         <ul>
           <li className="mb-4">
