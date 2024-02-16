@@ -20,7 +20,7 @@ function Sidebar() {
       <span className="absolute text-white text-4xl top-5 left-4 cursor-pointer" onClick={openBar}>
         <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
       </span>
-      <div className={`sidebar fixed top-0 bottom-0 lg:left-0 left-${sidebarLeft ? '-300' : '0'} duration-1000 p-2 w-64 lg:w-300 overflow-y-auto text-center bg-orange-600 shadow h-screen`}>
+      <div className={`sidebar fixed top-0 bottom-0 lg:left-0 left-${sidebarLeft ? '-300' : '0'} duration-1000 p-2 w-64 lg:w-300 overflow-y-auto text-center bg-orange-500 shadow h-screen`}>
   <div className="text-gray-100 text-xl">
     <div className="p-2.5 mt-1 flex items-center rounded-md">
       <img 
@@ -62,6 +62,10 @@ function Sidebar() {
             <Link to="/experience" className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600">
               <i className="bi bi-envelope-fill"></i>
               <span className="text-15px ml-4 text-gray-200">Experience</span>
+            </Link>
+            <Link to="/skills" className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600">
+              <i className="bi bi-envelope-fill"></i>
+              <span className="text-15px ml-4 text-gray-200">Skill</span>
             </Link>
             <Link to="/contact" className="p-2.5 mt-2 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600">
               <i className="bi bi-chat-left-text-fill"></i>
