@@ -239,3 +239,110 @@ body:has(.card[data-color="green"]:hover) {
       opacity: 0.5;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
+
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: -200px; /* Hide the sidebar by default */
+        width: 200px;
+        height: 100%;
+        background-color: #333;
+        padding-top: 60px; /* Adjust the top padding for hamburger */
+        transition: left 0.3s ease-in-out;
+      }
+      
+      .sidebar.open {
+        left: 0; /* Show the sidebar when open */
+      }
+      
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      li {
+        padding: 10px;
+      }
+      
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+      
+      .hamburger {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        z-index: 1000; /* Ensure the hamburger is above the sidebar */
+      }
+      
+      .line {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+      }
+
+      .App {
+        font-family: Arial, sans-serif;
+      }
+      
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+      }
+      
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: transform 0.3s;
+      }
+      
+      .bar-open {
+        transform: rotate(45deg);
+        transition: transform 0.3s;
+      }
+      
+      .menu {
+        display: none;
+      }
+      
+      .menu-open {
+        display: block;
+      }
+      
+      .menu ul {
+        padding: 0;
+      }
+      
+      .menu ul li {
+        list-style: none;
+        margin-bottom: 10px;
+      }
+      
+      .menu ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+      
+        .menu {
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #f9f9f9;
+          width: 100%;
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+      
+      

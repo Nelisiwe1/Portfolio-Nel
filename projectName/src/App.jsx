@@ -1,33 +1,30 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Sidebar";
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './Sidebar'; // Assuming Sidebar.js is in the same directory
 import Home from './components/Home';
 import About from './components/About';
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-// import EarthPage from "./components/EarthPage";
+import Portfolio from './components/Portfolio';
+import Experience from './components/Experience';
+ // Assuming you have Home.js, About.js, Work.js, Contact.js in your project
 
-
-
-
-const App = () => {
+function App() {
   return (
-    
-    <main className='bg-slate-300/20'>
-     
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/experience" element={<Experience />} />
-          {/* <Route path="/earthpage" element={<EarthPage />} /> */}
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
-    </main>
+    <Router>
+      <div className="App">
+        <Sidebar />
+        <div className="content">
+          <Routes>
+            {/* Define your routes using <Route> */}
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/experience" element={<Experience />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
-};
+}
 
 export default App;

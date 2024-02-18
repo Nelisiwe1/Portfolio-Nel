@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "@react-three/drei": "^9.97.5",
     "@react-three/fiber": "^8.15.16",
     "3d-earth": "^1.0.8",
