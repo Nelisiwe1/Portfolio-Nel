@@ -1,27 +1,37 @@
-import React from 'react';
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
+import React, { useState } from 'react';
+import Sidebar from '../Sidebar';
 import Homebackground from './Homebackground';
 
-function Home() {
-    return (
-        <section style={{ position: 'relative' }}>
-            <Homebackground/>
+const Homepage = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-            <div className="content" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', zIndex: 1 }}>
-                <h3 className="text-4xl text-white uppercase mb-4 font-3d">
-                    <span className="text-main-color">Nelisiwe Ngqeme</span>
-                </h3>
-                <div className="info text-2xl text-white py-2">Software Developer</div>
-  
-                <div className="flex justify-center space-x-4">
-                    <FaGithubSquare className="w-8 h-8 text-gray-500" />
-                    <FaLinkedin className="w-8 h-8 text-gray-500" />
-                    <AiFillTwitterCircle className="w-8 h-8 text-gray-500" />
-                </div>
-            </div>
-        </section>
-    );
-}
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
 
-export default Home;
+  return (
+    <div className="relative h-screen">
+      {/* Background Video */}
+      <Homebackground/>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} />
+
+      {/* Content Container */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center">
+        {/* Navbar */}
+        <div className="absolute top-0 right-0 m-4 bg-white" >
+          <button onClick={toggleSidebar}>☰</button>
+        </div>
+
+        {/* Text Content */}
+        <div className="text-center text-white">
+          <h1 className="text-4xl">Nelisiwe Ngqeme</h1>
+          <p>Software developer.</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Homepage;

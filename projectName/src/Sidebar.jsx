@@ -1,43 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './index.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
+import { AiOutlineClose } from 'react-icons/ai'; // Import the cross icon
+import Homepage from './components/Home';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
-function Sidebar() {
+const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
-    <header>
-      <div className="menu-btn">
-        <div className="btn-line"></div>
-        <div className="btn-line"></div>
-        <div className="btn-line"></div>
-      </div>
-      <nav className="menu">
-        <div className="menu-branding">
-          <div className="portrait"></div>
-        </div>
-        <ul className="menu-nav">
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item current">
-            <Link to="/about" className="nav-link">
-              About Me
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/portfolio" className="nav-link">
-              My Work
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/experince" className="nav-link">
-              How To Reach Me
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <nav className={`fixed top-0 left-0 h-screen bg-orange-600 w-64 ${isOpen ? 'block' : 'hidden'}`}>
+      <button onClick={closeSidebar} className="absolute top-2 right-2 md:hidden">
+        <AiOutlineClose className="text-gray-600 w-6 h-6" />
+      </button>
+      <ul>
+        
+        <li><Homepage to="/">Home</Homepage></li>
+        <li><About to="/about">About</About></li>
+        <li><Portfolio to="/portfolio">Portfolio</Portfolio></li>
+        <li><Experience to="/experience">Experience</Experience></li>
+        <li><Contact to="/contact">Contact</Contact></li>
+        {/* Add more links as needed */}
+        
+      </ul>
+    </nav>
   );
-}
+};
+
 export default Sidebar;
