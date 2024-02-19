@@ -11,11 +11,9 @@ import './index.css';
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsSidebarOpen(!isSidebarOpen);
+  // };
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
@@ -38,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+

@@ -243,44 +243,36 @@ body:has(.card[data-color="green"]:hover) {
 
 /* Sidebar.css */
 .sidebar {
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center the content vertically */
-  align-items: center; /* Center the content horizontally */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 16rem;
+  background-color: orangered; /* orange color */
+  display: none;
 }
 
-.sidebar h2 {
-  margin-bottom: 20px;
+.sidebar.open {
+  display: block;
 }
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px; /* Add margin at the top */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
-.sidebar ul li {
-  margin-bottom: 10px;
+.menu-item {
+  margin-top: 1rem;
 }
 
-.sidebar ul li a {
-  color: #fff;
-  text-decoration: none;
+.menu-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 8px 20px;
-  border-radius: 4px;
-  width: 100%; /* Make the links full width */
-}
-
-.sidebar ul li a svg {
-  margin-right: 10px;
+  justify-content: center;
+  color: black;
+  font-size: 1.125rem; /* 18px */
+  text-decoration: none;
 }
 
 .img {
@@ -410,9 +402,9 @@ time {
 /* EFFECTS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.timeline ul li::after {
+/* .timeline ul li::after {
   transition: background 0.5s ease-in-out;
-}
+} */
 
 .timeline ul li.in-view::after {
   background: #f45b69;
