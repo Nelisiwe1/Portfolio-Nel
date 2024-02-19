@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineClose } from 'react-icons/ai'; // Import the cross icon
-import Homepage from './components/Home';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUser, faEnvelope, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
@@ -14,14 +12,37 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         <AiOutlineClose className="text-gray-600 w-6 h-6" />
       </button>
       <ul>
-        
-        <li><Homepage to="/">Home</Homepage></li>
-        <li><About to="/about">About</About></li>
-        <li><Portfolio to="/portfolio">Portfolio</Portfolio></li>
-        <li><Experience to="/experience">Experience</Experience></li>
-        <li><Contact to="/contact">Contact</Contact></li>
-        {/* Add more links as needed */}
-        
+        <li>
+          <Link to="/">
+            <FontAwesomeIcon icon={faHome} />
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/about">
+            <FontAwesomeIcon icon={faUser} />
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="/portfolio">
+            <FontAwesomeIcon icon={faBriefcase} />
+            Portfolio
+          </Link>
+        </li>
+        <li>
+          <Link to="/experience">
+            <FontAwesomeIcon icon={faBriefcase} />
+            Experience
+          </Link>
+        </li>
+        <li>
+          <Link to="/contact">
+            <FontAwesomeIcon icon={faEnvelope} />
+            Contact
+          </Link>
+        </li>
+       
       </ul>
     </nav>
   );

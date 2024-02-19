@@ -20,8 +20,8 @@ const Homepage = () => {
       {/* Content Container */}
       <div className="absolute inset-0 flex flex-col justify-center items-center">
         {/* Navbar */}
-        <div className="absolute top-0 right-0 m-4 bg-white" >
-          <button onClick={toggleSidebar}>☰</button>
+        <div className="absolute top-0 right-0 m-4 bg-white w-8" >
+          <button onClick={toggleSidebar} className="w-10">☰</button>
         </div>
 
         {/* Text Content */}

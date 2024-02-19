@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./Sidebar";
+import Sidebar from "./Sidebar";
 import Home from './components/Home';
 import About from './components/About';
 import Portfolio from "./components/Portfolio";
@@ -16,7 +16,7 @@ const App = () => {
     <main className='bg-slate-300/20'>
      
       <Router>
-        <Navbar />
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
